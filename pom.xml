@@ -71,6 +71,7 @@
     </dependencyManagement>
 
     <build>
+        <finalName>app</finalName>
         <!--  编译资源-->
         <resources>
             <resource>
