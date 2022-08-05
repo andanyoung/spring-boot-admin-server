@@ -1,0 +1,34 @@
+# Tomcat
+server:
+  port: 9666
+
+# Spring
+spring:
+  application:
+    # 应用名称
+    name: sb-admin
+  profiles:
+    # 环境配置
+    active: @profiles.active@
+
+  security:
+    user:
+      name: user
+      password: 123456
+  cloud:
+    nacos:
+      discovery:
+        # 服务注册地址
+        server-addr: @nacos.server-addr@
+        namespace: @nacos.discovery.namespace@
+        username: @nacos.username@
+        password: @nacos.password@
+        enabled: true
+      config:
+        # 配置中心地址
+        server-addr: @nacos.server-addr@
+        # 配置文件格式
+        file-extension: yml
+        namespace: @nacos.config.namespace@
+        username: @nacos.username@
+        password: @nacos.password@
